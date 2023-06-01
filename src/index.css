@@ -1,0 +1,25 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  font-family: "Poppins", sans-serif;
+}
+
+.nav-btn {
+  @apply cursor-pointer flex gap-x-2 items-center py-4 text-sm pl-3 pr-4 hover:bg-gray-900 rounded-xl transform hover:scale-105 transition ease-in duration-200 dark:hover:text-gray-300
+}
+
+.search {
+  @apply bg-tertiary md:dark:bg-gray-400 md:bg-primary w-36 md:w-52 border-none placeholder:text-gray-600 text-sm;
+}
+
+.card {
+  @apply h-72 w-72 mb-5 ml-0 items-center rounded-2xl;
+}
+
+.button {
+  @apply bg-yellow-300 text-primary text-sm px-4 py-2 rounded-lg cursor-pointer mx-11 mt-52 font-semibold;
+}
