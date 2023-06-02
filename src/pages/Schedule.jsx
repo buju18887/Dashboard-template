@@ -9,7 +9,7 @@ function Schedule() {
   const calenderRef = useRef();
 
   return (
-    <div className="p-10 md:ml-56 text-gray-400 dark:text-primary dark:bg-gray-400">
+    <div className="p-10 md:ml-56 text-gray-400 dark:text-primary dark:bg-gray-100">
       <FullCalendar
         ref={calenderRef}
         plugins={[dayGridPlugin, timeGridPlugin, interactionPlugin]}

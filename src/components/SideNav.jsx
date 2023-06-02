@@ -26,7 +26,7 @@ function SideNav({ show, modeSet }) {
           : "hidden"
       }`}
     >
-      <div className="fixed flex-shrink-0 overflow-x-hidden left-0 w-56 bg-primary h-full p-5 pt-7 text-gray-300 font-light border-r-2 border-slate-800 dark:border-slate-500 dark:bg-gray-400 dark:text-primary">
+      <div className="fixed flex-shrink-0 overflow-x-hidden left-0 w-56 bg-primary h-full p-5 pt-7 text-gray-300 font-light border-r-2 border-slate-800 dark:border-slate-500 dark:bg-gray-100 dark:text-primary">
         <div className="font-bold flex justify-items-center items-center gap-x-1 text-xl pb-8 ml-10">
           <span className="text-yellow-300 text-2xl">
             <MdLabelImportant />

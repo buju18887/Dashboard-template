@@ -20,7 +20,7 @@ function Dashboard() {
     <>
       <TopNav toggleSideNav={toggleSideNav}/>
       {sideNavVisible && <SideNav show={show}/>}
-      <div className="px-10 pt-3 h-full md:py-0 grid md:grid-cols-2 lg:grid-cols-3 gap-5 md:gap-14 md:ml-56 dark:bg-gray-400">
+      <div className="px-10 justify-center pt-3 h-full md:py-0 grid md:grid-cols-2 lg:grid-cols-3 gap-5 md:gap-14 md:ml-56 dark:bg-gray-100">
         <Card1 />
         <Card2 />
         <Card3 />

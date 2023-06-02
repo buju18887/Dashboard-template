@@ -4,7 +4,7 @@ import { RxTextAlignJustify } from "react-icons/rx";
 
 function TopNav({ toggleSideNav }) {
   return (
-    <div className="flex py-5 px-2 md:px-10 gap-x-5 md:justify-between md:ml-56 bg-tertiary md:bg-primary md:dark:bg-gray-400">
+    <div className="flex mx-auto justify-center py-5 px-2 md:px-10 gap-x-5 md:justify-between md:ml-56 bg-tertiary md:bg-primary md:dark:bg-gray-100">
       <div className="hidden  lg:block items-center">
         <h1 className="text-sm text-gray-400 dark:text-primary py-1 lg:text-xl">
           Statistics

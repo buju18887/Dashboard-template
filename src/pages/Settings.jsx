@@ -2,7 +2,7 @@ import { PhotoIcon, UserCircleIcon } from "@heroicons/react/24/solid";
 
 function Settings() {
   return (
-    <div className="px-10 pb-10 md:ml-56 dark:bg-gray-400">
+    <div className="px-10 pb-10 md:ml-56 dark:bg-gray-100">
       <div className="text-xl text-gray-300 dark:text-primary py-5">
         Settings
       </div>

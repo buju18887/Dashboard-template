@@ -13,7 +13,7 @@
 }
 
 .search {
-  @apply bg-tertiary md:dark:bg-gray-400 md:bg-primary w-36 md:w-52 border-none placeholder:text-gray-600 text-sm;
+  @apply bg-tertiary md:dark:bg-gray-100 md:bg-primary w-36 md:w-52 border-none placeholder:text-gray-600 text-sm;
 }
 
 .card {
