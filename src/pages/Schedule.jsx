@@ -6,9 +6,10 @@ import interactionPlugin from "@fullcalendar/interaction";
 import eventsData from "../data/events";
 import EventModal from "../components/EventModal";
 import moment from "moment-timezone";
+import { v4 as uuidv4 } from "uuid";
 
 function Schedule() {
-  const defaultModalProps = { id: "", title: "", start: null, end: null };
+  const defaultModalProps = { id: uuidv4(), title: "", start: null, end: null };
   const calendarRef = useRef();
   const [addModal, SetAddModal] = useState(false);
   const [editModal, SetEditModal] = useState(false);
@@ -23,6 +24,7 @@ function Schedule() {
 
   const onEventAdd = (props) => {
     const newEvent = {
+      id: uuidv4(),
       ...props,
       className: "bg-yellow-500",
       allDay: props.sameDay,
