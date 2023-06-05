@@ -17,6 +17,10 @@ function Schedule() {
 
   const currentDate = moment().format("YYYY-MM-DD");
 
+  const formatDate = (date) => {
+    return moment(date).format("YYYY-MM-DD");
+  };
+
   const onEventAdd = (props) => {
     const newEvent = {
       ...props,
@@ -66,26 +70,40 @@ function Schedule() {
     SetEditModal(true);
   };
 
-  const onClose = () =>{
-    SetAddModal(false)
-    SetEditModal(false)
-  }
+  const onClose = () => {
+    SetAddModal(false);
+    SetEditModal(false);
+  };
 
   return (
     <div className="p-10 md:ml-56 text-gray-400 dark:text-primary dark:bg-gray-100">
       <div className="flex justify-center items-center">
-      {addModal ? (
-        <EventModal {...modalProps} edit={false} onAdd={onEventAdd} onHide={onClose}/>
-      ) : null}
-      {editModal ? (
-        <EventModal
-          {...modalProps}
-          edit={true}
-          onUpdate={onEventUpdate}
-          onDelete={onEventDelete}
-          onHide={onClose}
-        />
-      ) : null}
+        {addModal ? (
+          <EventModal
+            {...modalProps}
+            edit={false}
+            onAdd={onEventAdd}
+            onHide={onClose}
+            defaultStart={formatDate(modalProps.start)}
+            defaultEnd={formatDate(
+               modalProps.start
+            )}
+          />
+        ) : null}
+        {editModal ? (
+          <EventModal
+            {...modalProps}
+            edit={true}
+            onUpdate={onEventUpdate}
+            onDelete={onEventDelete}
+            onHide={onClose}
+            defaultTitle={modalProps.title}
+            defaultStart={formatDate(modalProps.start)}
+            defaultEnd={formatDate(
+              modalProps.end === null ? modalProps.start : modalProps.end
+            )}
+          />
+        ) : null}
       </div>
       <FullCalendar
         ref={calendarRef}
