@@ -9,18 +9,18 @@ import Card6 from "../components/cards/Card6";
 import SideNav from "../components/SideNav";
 
 function Dashboard() {
-  const [sideNavVisible, SetSideNavVisible] = useState(false)
-  const [show, SetShow] = useState(false)
+  const [sideNavVisible, SetSideNavVisible] = useState(false);
+  const [show, SetShow] = useState(false);
 
   const toggleSideNav = () => {
-    SetSideNavVisible(!sideNavVisible)
-    SetShow(!show)
-  }
+    SetSideNavVisible(!sideNavVisible);
+    SetShow(!show);
+  };
   return (
-    <>
-      <TopNav toggleSideNav={toggleSideNav}/>
-      {sideNavVisible && <SideNav show={show}/>}
-      <div className="px-10 justify-center pt-3 h-full md:py-0 grid md:grid-cols-2 lg:grid-cols-3 gap-5 md:gap-14 md:ml-56 dark:bg-gray-100">
+    <div className="h-full dark:bg-gray-100 pb-10">
+      <TopNav toggleSideNav={toggleSideNav} />
+      {sideNavVisible && <SideNav show={show} />}
+      <div className="px-10 pt-3 justify-center items-center mx-auto gap-5 md:gap-y-14 lg:gap-10 md:pt-0 grid md:grid-cols-2 lg:grid-cols-3 lg:ml-56 ">
         <Card1 />
         <Card2 />
         <Card3 />
@@ -28,7 +28,7 @@ function Dashboard() {
         <Card5 />
         <Card6 />
       </div>
-    </>
+    </div>
   );
 }
 

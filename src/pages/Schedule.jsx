@@ -35,18 +35,16 @@ function Schedule() {
     SetModalProps(defaultModalProps);
   };
 
-  const onEventUpdate = (props) => {
-    const { id, title, start, end, sameDay } = props;
-    const calendarApi = calendarRef.current.getApi();
-    const calendarElem = calendarApi.getEventById(id);
+ const onEventUpdate = ({title, start, end}) => {
+  const eventToUpdate = events.find(e => e.id === modalProps.id)
+  if(eventToUpdate) {
+     
+    console.log(eventToUpdate);
+  } 
 
-    if (calendarElem) {
-      calendarElem.setProp("title", title);
-      calendarElem.setDates(start, end, { allDay: sameDay });
-    }
+  SetEditModal(false);
+};
 
-    SetEditModal(false);
-  };
 
   const onEventDelete = (id) => {
     const newEvents = events.filter((e) => e.id !== id);
@@ -95,6 +93,7 @@ function Schedule() {
         {editModal ? (
           <EventModal
             {...modalProps}
+            id={modalProps.id}
             edit={true}
             onUpdate={onEventUpdate}
             onDelete={onEventDelete}

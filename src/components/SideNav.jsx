@@ -9,7 +9,7 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 
 function SideNav({ show, modeSet }) {
-  const [activeBtn, SetActiveBtn] = useState([]);
+  const [activeBtn, SetActiveBtn] = useState([0]);
   const navBtnActive = "bg-gray-900 rounded-xl dark:text-gray-300";
 
   const onClickActive = (index) => {
@@ -20,18 +20,19 @@ function SideNav({ show, modeSet }) {
 
   return (
     <div
-      className={`md:block ${
+      className={`lg:block ${
         show
-          ? "block z-10 flex-shrink-0 overflow-x-hidden h-full md:hidden"
+          ? "block z-10 flex-shrink-0 overflow-x-hidden h-full lg:hidden"
           : "hidden"
       }`}
     >
-      <div className="fixed flex-shrink-0 overflow-x-hidden left-0 w-56 bg-primary h-full p-5 pt-7 text-gray-300 font-light border-r-2 border-slate-800 dark:border-slate-500 dark:bg-gray-100 dark:text-primary">
-        <div className="font-bold flex justify-items-center items-center gap-x-1 text-xl pb-8 ml-10">
-          <span className="text-yellow-300 text-2xl">
-            <MdLabelImportant />
+      <div className="fixed overflow-x-hidden left-0 w-56 bg-primary h-full pt-7 text-gray-300 font-light border-r-2 border-slate-800 dark:border-slate-500 dark:bg-gray-100 dark:text-primary">
+        <div className="font-bold flex justify-center items-center text-xl pb-8">
+          <span className="flex items-center">
+            <MdLabelImportant className="text-yellow-300 text-2xl"/>
+            <h1>LOGO</h1>
           </span>
-          <h1>LOGO</h1>
+          
         </div>
         <div className="flex flex-col justify-center items-center">
           <img
@@ -92,7 +93,7 @@ function SideNav({ show, modeSet }) {
             Settings
           </Link>
         </div>
-        <div className="flex gap-x-2 mt-52 justify-center items-center">
+        <div className="flex gap-x-2  absolute bottom-10 w-full justify-center items-center">
           <p className="text-xs font-semibold">Dark</p>
           <div className="space-x-3">
             <label className="relative inline-flex cursor-pointer items-center">

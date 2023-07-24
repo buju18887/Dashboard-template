@@ -66,13 +66,13 @@ function Card6() {
 
   return (
     <div className="card bg-tertiary p-5">
-      <h4 className="text-sm font-semibold text-secondary">
+      <div className="text-sm 2xl:text-base h-[10%] font-semibold text-secondary">
         Customer churn rate
-      </h4>
-      <div className="pr-2">
+      </div>
+      <div className="h-[90%]">
         <ReactApexChart
           type="bar"
-          height={230}
+          height={'100%'}
           series={chartSeries}
           options={chartOptions}
         />

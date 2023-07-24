@@ -62,7 +62,7 @@ function Card4() {
   };
 
   return (
-    <div className="card bg-tertiary p-5">
+    <div className="card relative bg-tertiary p-5">
       <div className="flex justify-between items-center">
         <div className="flex gap-x-2 items-center">
           <div className="bg-primary rounded-lg">
@@ -70,20 +70,25 @@ function Card4() {
               <MdBarChart />
             </p>
           </div>
-          <h4 className="text-sm font-semibold text-gray-400">ROI</h4>
+          <h4 className="text-sm 2xl:text-base font-semibold text-gray-400">
+            ROI
+          </h4>
         </div>
-        <p className="text-xs text-gray-600">Details</p>
+        <p className="text-xs 2xl:text-sm text-gray-600">Details</p>
       </div>
-      <div className="block mt-10 mb-0">
+      <div className="block my-10">
         <h1 className="text-5xl text-gray-400">283%</h1>
-        <p className="text-sm text-gray-600">Return on Investment</p>
+        <p className="text-sm 2xl:text-base text-gray-600">
+          Return on Investment
+        </p>
       </div>
-      <div className="mt-0 -z-10">
+      <div className="absolute py-3 h-[65%] 2xl:h-[75%] 2xl:w-[95%] bottom-0">
         <ReactApexChart
           type="area"
+          height={"100%"}
+          width={"100%"}
           options={options}
           series={series}
-          height={135}
         />
       </div>
     </div>

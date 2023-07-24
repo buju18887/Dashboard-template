@@ -46,32 +46,36 @@ function Card1() {
   };
 
   return (
-    <div className="card bg-yellow-300 p-5">
-      <div className="flex justify-between items-center">
-        <h4 className="font-semibold text-primary text-sm">Website traffic</h4>
-        <span className="text-gray-700 text-xs font-light">More</span>
-      </div>
-      <div className="pt-2 h-2/3">
-        <Doughnut data={data} options={options} className="mx-auto h-1/2" />
-      </div>
-      <div className="text-xs">
-        <div className="flex justify-between items-center p-2 border-b border-b-gray-500">
-          <div className="flex gap-2 items-center">
-            <p className="text-primary">
-              <BsFillSquareFill />
-            </p>
-            <p>Social Media</p>
-          </div>
-          <p>78%</p>
+    <div className="card bg-yellow-300">
+      <div className="wrapper relative h-full m-5">
+        <div className="flex justify-between items-center">
+          <h4 className="font-semibold text-primary text-sm">
+            Website traffic
+          </h4>
+          <span className="text-gray-700 text-xs font-light">More</span>
         </div>
-        <div className="flex justify-between items-center p-2">
-          <div className="flex gap-2 items-center">
-            <p className="text-secondary">
-              <BsFillSquareFill />
-            </p>
-            <p>Organic marketing</p>
+        <div className="pt-2 lg:pt-5 h-[60%] 2xl:h-[80%]">
+          <Doughnut data={data} options={options} className="mx-auto" />
+        </div>
+        <div className="text-xs absolute bottom-8 w-full">
+          <div className="flex justify-between items-center p-2 border-b border-b-gray-500">
+            <div className="flex gap-2 items-center">
+              <p className="text-primary">
+                <BsFillSquareFill />
+              </p>
+              <p>Social Media</p>
+            </div>
+            <p>78%</p>
           </div>
-          <p>22%</p>
+          <div className="flex justify-between items-center p-2">
+            <div className="flex gap-2 items-center">
+              <p className="text-secondary">
+                <BsFillSquareFill />
+              </p>
+              <p>Organic marketing</p>
+            </div>
+            <p>22%</p>
+          </div>
         </div>
       </div>
     </div>

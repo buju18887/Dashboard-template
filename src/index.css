@@ -13,15 +13,15 @@
 }
 
 .search {
-  @apply bg-tertiary md:dark:bg-gray-100 md:bg-primary w-36 md:w-52 border-none placeholder:text-gray-600 text-sm;
+  @apply bg-transparent md:dark:bg-gray-100 text-gray-400 md:bg-primary w-36 md:w-52 rounded-full border-b border-transparent focus:border-gray-400 focus:ring-transparent placeholder:text-gray-600 text-sm;
 }
 
 .card {
-  @apply h-72 w-72 mb-5 ml-0 items-center rounded-2xl;
+  @apply h-[40vh] md:h-[30vh] lg:h-[50vh] w-full ml-0 items-center rounded-2xl;
 }
 
 .button {
-  @apply bg-yellow-300 text-primary text-sm px-4 py-2 rounded-lg cursor-pointer mx-11 mt-52 font-semibold;
+  @apply bg-yellow-300 text-primary text-sm 2xl:text-lg px-5 py-3 rounded-lg cursor-pointer font-semibold;
 }
 
 .button-modal {
