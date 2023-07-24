@@ -3,7 +3,7 @@ import { MdNotificationsNone, MdViewStream } from "react-icons/md";
 
 function TopNav({ toggleSideNav }) {
   return (
-    <div className="flex mx-auto justify-center py-5 px-2 md:px-10 gap-x-5 md:justify-between lg:ml-56 bg-tertiary md:bg-primary md:dark:bg-gray-100">
+    <div className="flex mx-auto py-5 px-2 md:px-10 gap-x-5 justify-between lg:ml-56 bg-tertiary md:bg-primary md:dark:bg-gray-100">
       <div className="hidden  lg:block items-center">
         <h1 className="text-sm text-gray-400 dark:text-primary py-1 lg:text-xl">
           Statistics
@@ -17,7 +17,7 @@ function TopNav({ toggleSideNav }) {
           <MdViewStream />
         </span>
       </div>
-      <div className="flex items-center gap-x-1 md:ml-5">
+      <div className="md:flex hidden items-center gap-x-1 md:ml-5">
         <span className="text-gray-400 text-xl cursor-pointer md:dark:text-primary">
           <BiSearchAlt />
         </span>

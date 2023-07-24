@@ -76,7 +76,7 @@ function Schedule() {
   };
 
   return (
-    <div className="p-10 md:ml-56 text-gray-400 dark:text-primary dark:bg-gray-100">
+    <div className="p-10 lg:ml-56 text-gray-400 dark:text-primary dark:bg-gray-100">
       <div className="flex justify-center items-center">
         {addModal ? (
           <EventModal
